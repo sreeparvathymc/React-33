@@ -1,0 +1,93 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+:root{
+  --line-border-fill: #6303f1;
+  --line-border-empty: #383838;
+}
+.container{
+  width: 550px;
+  background-color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  overflow-x: hidden;
+}
+
+.container h2{
+  font-size: 2rem;
+  color: var(--line-border-empty);
+  padding: 2rem 0 1rem 0;
+}
+
+.progress_container{
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+  position: relative;
+}
+
+.progress_container::before{
+  content: "";
+  background-color: #ddd;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+  transform: translateY(-50%);
+}
+
+.progress{
+  background-color: var(--line-border-fill);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 4px;
+  z-index: 1;
+  transition: all 0.8s ease-in;
+}
+
+.circle{
+  background-color: #ddd;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  z-index: 1;
+}
+.circle.active{
+  border-color: var(--line-border-empty);
+  color: #fff;
+  background-color: #43766c;
+
+}
+.btns{
+  display: flex;
+  margin: 1rem 0;
+  justify-content: space-between;
+}
+
+.btn{
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 4px;
+  background-color: #6303f1;
+  color: #fff;
+  padding: 4px 40px;
+}
+
+
+.container h2{
+  text-align: center;
+
+}
